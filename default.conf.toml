@@ -1,0 +1,6 @@
+mcp_index_base_url = "http://localhost:8788"
+port = 8788
+workers = 2
+
+tavily_api_key = ""
+jina_api_key = ""

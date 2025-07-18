@@ -1,0 +1,118 @@
+[
+    {
+        "name": "get_joint_associated_diseases_by_HPO_ID_list",
+        "description": "Retrieve diseases associated with a list of phenotypes or symptoms by a list of HPO IDs.\n\nArgs:\n    HPO_ID_list: Hpo_id_list (array)\n    type_of_HPO_ID_list: array\n    limit: Limit\n    type_of_limit: integer\n    offset: Offset\n    type_of_offset: integer\n\nQuery example: {\"HPO_ID_list\": [\"HP:0001250\", \"HP:0004322\"], \"limit\": 10, \"offset\": 0}\n\nReturns:\n    A list of dictionaries. Each dictionary contains: disease_id-Unique identifier for the disease, disease_name-Disease label, matched_hpo_terms-List of HPO terms that matched, source-Database source, score-Optional joint association score (if available)",
+        "parameter": {
+            "type": "object",
+            "properties": {
+                "HPO_ID_list": {
+                    "type": "array",
+                    "description": "List of phenotypes or symptoms",
+                    "items": {
+                        "type": "string",
+                        "description": "The HPO ID of the phenotype or symptom.",
+                        "required": true
+                    },
+                    "required": true
+                },
+                "limit": {
+                    "type": "integer",
+                    "description": "Number of entries to fetch.",
+                    "required": false
+                },
+                "offset": {
+                    "type": "integer",
+                    "description": "Number of initial entries to skip.",
+                    "required": false
+                }
+            }
+        },
+        "query_schema": {
+            "category": [
+                "biolink:DiseaseToPhenotypicFeatureAssociation"
+            ],
+            "object": null,
+            "compact": true,
+            "object_category": [
+                "biolink:PhenotypicFeature"
+            ],
+            "limit": 500,
+            "offset": 0
+        },
+        "label": [
+            "Monarch",
+            "Phenotype",
+            "Symptom",
+            "Disease",
+            "HPO_ID"
+        ],
+        "type": "MonarchDiseasesForMultiplePheno",
+        "tool_url": "/association"
+    },
+    {
+        "name": "get_phenotype_by_HPO_ID",
+        "description": "Retrieve a phenotype or symptom by its HPO ID.\n\nArgs:\n    id: A single HPO identifier\n    type: string\n\nQuery example: {\"id\": \"HP:0001250\"}\n\nReturns:\n    A dictionary containing: hpo_id-The HPO identifier, phenotype_label-Human-readable name, definition-Formal definition of the term, synonyms-List of synonyms, parents-Parent term IDs, xrefs-Cross-references to other ontologies",
+        "parameter": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "The HPO ID of the phenotype or symptom.",
+                    "required": true
+                }
+            }
+        },
+        "query_schema": {
+            "id": null,
+            "url_key": "id"
+        },
+        "label": [
+            "Monarch",
+            "Phenotype",
+            "Symptom",
+            "HPO_ID"
+        ],
+        "type": "Monarch",
+        "tool_url": "/entity/{url_key}"
+    },
+    {
+        "name": "get_HPO_ID_by_phenotype",
+        "description": "Retrieve one or more HPO ID of a phenotype or symptom.\n\nArgs:\n    query: Phenotype keyword to search\n    type_of_query: string\n    limit: Maximum number of results to return\n    typr_of_limit: integer\n    offset: Number of results to skip\n    type_of_offset: integer\n\nQuery example: {\"query\": \"seizure\", \"limit\": 10, \"offset\": 0}\n\nReturns:\n    A list of dictionaries, each containing hpo_id-HPO term identifier, phenotype_label-Human-readable label, definition-Optional textual definition, synonyms-List of synonym terms, match_score-Optional similarity or relevance score",
+        "parameter": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string",
+                    "description": "One query phenotype or symptom.",
+                    "required": true
+                },
+                "limit": {
+                    "type": "integer",
+                    "description": "Number of entries to fetch.",
+                    "required": false
+                },
+                "offset": {
+                    "type": "integer",
+                    "description": "Number of initial entries to skip.",
+                    "required": false
+                }
+            }
+        },
+        "query_schema": {
+            "query": null,
+            "category": [
+                "biolink:PhenotypicFeature"
+            ],
+            "limit": 20,
+            "offset": 0
+        },
+        "label": [
+            "Monarch",
+            "Phenotype",
+            "Symptom",
+            "HPO_ID"
+        ],
+        "type": "Monarch",
+        "tool_url": "/search"
+    }
+]

@@ -1,0 +1,2 @@
+timestamp,toolset,method,url,client_ip,request_params,response
+2025-07-14T17:00:54.558217,ncbi_mcp,POST,http://127.0.0.1:8788/ncbi_mcp/mcp/,127.0.0.1,"{'name': 'get_gene_metadata_by_gene_name', 'arguments': {'name': 'TP53'}}",{'status_code': 200}
