@@ -8,7 +8,7 @@ OrigeneMCP is the MCP toolkit for the [OriGene](https://github.com/GENTEL-lab/Or
 Clone the repository:
 
 ```bash
-git clone https://github.com/yliust/OrigeneMCP.git
+git clone https://github.com/GENTEL-lab/OrigeneMCP.git
 ```
 
 The dependencies of this repository are managed by uv. Before deployment, please make sure that uv is already installed. Use the following commands to install uv:
