@@ -1,0 +1,4 @@
+local.conf.toml
+tools/*/__pycache__
+deploy/__pycache__
+
