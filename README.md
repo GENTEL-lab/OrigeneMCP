@@ -22,6 +22,10 @@ pip install uv
 uv venv .venv --python=3.13
 ```
 
+```bash
+source .venv/bin/activate
+```
+
 Initialize the dependencies of this repository:
 ```bash
 uv sync
