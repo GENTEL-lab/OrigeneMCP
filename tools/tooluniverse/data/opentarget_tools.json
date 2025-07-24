@@ -15,9 +15,11 @@
             "properties": {
                 "efoId": {
                     "type": "string",
-                    "description": "The efoId of a disease or phenotype.",
-                    "required": true
-                }
+                    "description": "The efoId of a disease or phenotype."
+                },
+                "required": [
+                    "efoId"
+                ]
             }
         },
         "query_schema": "\nquery associatedTargets($efoId: String!) {\n  disease(efoId: $efoId) {\n    id\n    name\n    associatedTargets {\n      count\n      rows {\n        target {\n          id\n          approvedSymbol\n        }\n        score\n      }\n    }\n  }\n}\n",
@@ -39,9 +41,11 @@
             "properties": {
                 "ensemblId": {
                     "type": "string",
-                    "description": "The ensemblId of a target.",
-                    "required": true
-                }
+                    "description": "The ensemblId of a target."
+                },
+                "required": [
+                    "ensemblId"
+                ]
             }
         },
         "query_schema": "\nquery associatedDiseases($ensemblId: String!) {\n  target(ensemblId: $ensemblId) {\n    id\n    approvedSymbol\n    associatedDiseases {\n      count\n      rows {\n        disease {\n          id\n          name\n        }\n        datasourceScores {\n          id\n          score\n        }\n      }\n    }\n  }\n}\n",
@@ -63,14 +67,16 @@
             "properties": {
                 "efoId": {
                     "type": "string",
-                    "description": "The efoId of a disease or phenotype.",
-                    "required": true
+                    "description": "The efoId of a disease or phenotype."
                 },
                 "ensemblId": {
                     "type": "string",
-                    "description": "The ensemblId of a target.",
-                    "required": true
-                }
+                    "description": "The ensemblId of a target."
+                },
+                "required": [
+                    "efoId",
+                    "ensemblId"
+                ]
             }
         },
         "query_schema": "\nquery targetDiseaseEvidence($efoId: String!, $ensemblId: String!) {\n  disease(efoId: $efoId) {\n    id\n    name\n    evidences(ensemblIds: [$ensemblId]) {\n      count\n      rows {\n        disease {\n          id\n          name\n        }\n        diseaseFromSource\n        target {\n          id\n          approvedSymbol\n        }\n        mutatedSamples {\n          functionalConsequence {\n            id\n            label\n          }\n          numberSamplesTested\n          numberMutatedSamples\n        }\n        resourceScore\n        significantDriverMethods\n        cohortId\n        cohortShortName\n        cohortDescription\n      }\n    }\n  }\n}\n",
@@ -84,9 +90,11 @@
             "properties": {
                 "chemblId": {
                     "type": "string",
-                    "description": "The ChEMBL ID of the drug.",
-                    "required": true
-                }
+                    "description": "The ChEMBL ID of the drug."
+                },
+                "required": [
+                    "chemblId"
+                ]
             }
         },
         "query_schema": "\n  query drugWarnings($chemblId: String!) {\n    drug(chemblId: $chemblId) {\n      id\n      name\n      drugWarnings {\n        warningType\n        description\n        country\n        year\n        toxicityClass\n        chemblIds\n     efoIdForWarningClass\n      references {\n          id\n          source\n          url\n        }\n      }\n    }\n  }\n  ",
@@ -111,9 +119,11 @@
             "properties": {
                 "chemblId": {
                     "type": "string",
-                    "description": "The ChEMBL ID of the drug.",
-                    "required": true
-                }
+                    "description": "The ChEMBL ID of the drug."
+                },
+                "required": [
+                    "chemblId"
+                ]
             }
         },
         "query_schema": "\n  query drugMechanismsOfAction($chemblId: String!) {\n    drug(chemblId: $chemblId) {\n      id\n      name\n      mechanismsOfAction {\n        rows {\n          mechanismOfAction\n          actionType\n         targetName\n          targets {\n            id\n            approvedSymbol\n          }\n        }\n      }\n    }\n  }\n  ",
@@ -136,14 +146,16 @@
             "properties": {
                 "efoId": {
                     "type": "string",
-                    "description": "The EFO ID of the disease.",
-                    "required": true
+                    "description": "The EFO ID of the disease."
                 },
                 "size": {
                     "type": "integer",
-                    "description": "Number of entries to fetch, recomanding a large number to avoid missing drugs.",
-                    "required": true
-                }
+                    "description": "Number of entries to fetch, recomanding a large number to avoid missing drugs."
+                },
+                "required": [
+                    "efoId",
+                    "size"
+                ]
             }
         },
         "query_schema": "\n  query diseaseKnownDrugs($efoId: String!, $size: Int!, $freeTextQuery: String) {\n    disease(efoId: $efoId) {\n      id\n      name\n      knownDrugs(size: $size, freeTextQuery: $freeTextQuery) {\n        count\n        rows {\n          drug {\n            id\n            name\n            tradeNames\n            maximumClinicalTrialPhase\n            isApproved\n            hasBeenWithdrawn\n          }\n          phase\n          status\n          mechanismOfAction\n          target {\n            id\n            approvedSymbol\n          }\n        }\n      }\n    }\n  }\n  ",
@@ -164,19 +176,21 @@
             "properties": {
                 "efoId": {
                     "type": "string",
-                    "description": "The EFO ID of the disease.",
-                    "required": true
+                    "description": "The EFO ID of the disease."
                 },
                 "threshold": {
                     "type": "number",
-                    "description": "Threshold similarity between 0 and 1. Only results above threshold are returned.",
-                    "required": true
+                    "description": "Threshold similarity between 0 and 1. Only results above threshold are returned."
                 },
                 "size": {
                     "type": "integer",
-                    "description": "Number of similar entities to fetch.",
-                    "required": true
-                }
+                    "description": "Number of similar entities to fetch."
+                },
+                "required": [
+                    "efoId",
+                    "size",
+                    "threshold"
+                ]
             }
         },
         "query_schema": "\n  query diseaseSimilarEntities($efoId: String!, $threshold: Float!, $size: Int!) {\n    disease(efoId: $efoId) {\n      id\n      name\n      similarEntities(threshold: $threshold, size: $size) {\n        id\n        category\n        score\n        object {\n          ... on Disease {\n            id\n            name\n          }\n          ... on Target {\n            id\n            approvedSymbol\n          }\n          ... on Drug {\n            id\n            name\n          }\n        }\n      }\n    }\n  }\n  ",
@@ -198,19 +212,21 @@
             "properties": {
                 "chemblId": {
                     "type": "string",
-                    "description": "The chemblId of the disease.",
-                    "required": true
+                    "description": "The chemblId of the disease."
                 },
                 "threshold": {
                     "type": "number",
-                    "description": "Threshold similarity between 0 and 1. Only results above threshold are returned.",
-                    "required": true
+                    "description": "Threshold similarity between 0 and 1. Only results above threshold are returned."
                 },
                 "size": {
                     "type": "integer",
-                    "description": "Number of similar entities to fetch.",
-                    "required": true
-                }
+                    "description": "Number of similar entities to fetch."
+                },
+                "required": [
+                    "chemblId",
+                    "size",
+                    "threshold"
+                ]
             }
         },
         "query_schema": "\n  query diseaseSimilarEntities($chemblId: String!, $threshold: Float!, $size: Int!) {\n    drug(chemblId: $chemblId) {\n      id\n      name\n      similarEntities(threshold: $threshold, size: $size) {\n        id\n        category\n        score\n        object {\n          ... on Disease {\n            id\n            name\n          }\n          ... on Target {\n            id\n            approvedSymbol\n          }\n          ... on Drug {\n            id\n            name\n          }\n        }\n      }\n    }\n  }\n  ",
@@ -232,19 +248,21 @@
             "properties": {
                 "ensemblId": {
                     "type": "string",
-                    "description": "The ensemblID of the disease.",
-                    "required": true
+                    "description": "The ensemblID of the disease."
                 },
                 "threshold": {
                     "type": "number",
-                    "description": "Threshold similarity between 0 and 1. Only results above threshold are returned.",
-                    "required": true
+                    "description": "Threshold similarity between 0 and 1. Only results above threshold are returned."
                 },
                 "size": {
                     "type": "integer",
-                    "description": "Number of similar entities to fetch.",
-                    "required": true
-                }
+                    "description": "Number of similar entities to fetch."
+                },
+                "required": [
+                    "ensemblId",
+                    "size",
+                    "threshold"
+                ]
             }
         },
         "query_schema": "\n  query diseaseSimilarEntities($ensemblId: String!, $threshold: Float!, $size: Int!) {\n    target(ensemblId: $ensemblId) {\n      id\n      approvedSymbol\n      similarEntities(threshold: $threshold, size: $size) {\n        id\n        category\n        score\n        object {\n          ... on Disease {\n            id\n            name\n          }\n          ... on Target {\n            id\n            approvedSymbol\n          }\n          ... on Drug {\n            id\n            name\n          }\n        }\n      }\n    }\n  }\n  ",
@@ -266,9 +284,11 @@
             "properties": {
                 "efoId": {
                     "type": "string",
-                    "description": "The efoId of a disease or phenotype.",
-                    "required": true
-                }
+                    "description": "The efoId of a disease or phenotype."
+                },
+                "required": [
+                    "efoId"
+                ]
             }
         },
         "query_schema": "query diseaseAnnotation($efoId: String!) {\n  disease(efoId: $efoId) {\n    id\n    name\n    phenotypes {\n      rows {\n        phenotypeHPO {\n          id\n          name\n          description\n          namespace\n        }\n        phenotypeEFO {\n          id\n          name\n        }\n      }\n    }\n  }\n}",
@@ -293,9 +313,11 @@
                     "items": {
                         "type": "string"
                     },
-                    "description": "The chemblId of a drug.",
-                    "required": true
-                }
+                    "description": "The chemblId of a drug."
+                },
+                "required": [
+                    "chemblId"
+                ]
             }
         },
         "query_schema": "\n  query drugWithdrawnWarningData($chemblId: String!) {\n    drug(chemblId: $chemblId) {\n      name\n      id\n      hasBeenWithdrawn\n      blackBoxWarning\n    }\n  }\n  ",
@@ -316,9 +338,11 @@
             "properties": {
                 "queryString": {
                     "type": "string",
-                    "description": "The search string for querying information.",
-                    "required": true
-                }
+                    "description": "The search string for querying information."
+                },
+                "required": [
+                    "queryString"
+                ]
             }
         },
         "query_schema": "\n  query searchCategoryCounts($queryString: String!) {\n    search(queryString: $queryString) {\n      aggregations {\n        total\n        entities {\n          total\n          name\n        }\n      }\n    }\n  }\n  ",
@@ -341,9 +365,11 @@
             "properties": {
                 "diseaseName": {
                     "type": "string",
-                    "description": "The name of the disease to search for.",
-                    "required": true
-                }
+                    "description": "The name of the disease to search for."
+                },
+                "required": [
+                    "diseaseName"
+                ]
             }
         },
         "query_schema": "\n    query getDiseaseIdByName($diseaseName: String!) {\n      search(queryString: $diseaseName, entityNames: [\"disease\"]) {\n        hits {\n          id\n          name\n          description\n        }\n      }\n    }\n    ",
@@ -366,9 +392,11 @@
             "properties": {
                 "drugName": {
                     "type": "string",
-                    "description": "The name of the drug for which the ID is required.",
-                    "required": true
-                }
+                    "description": "The name of the drug for which the ID is required."
+                },
+                "required": [
+                    "drugName"
+                ]
             }
         },
         "query_schema": "\n  query getDrugIdByName($drugName: String!) {\n    search(queryString: $drugName, entityNames: [\"drug\"]) {\n      hits {\n        id\n        name\n       description\n      }\n    }\n  }\n  ",
@@ -390,9 +418,11 @@
             "properties": {
                 "chemblId": {
                     "type": "string",
-                    "description": "The chemblId of the drug for which to retrieve treatable phenotypes information.",
-                    "required": true
-                }
+                    "description": "The chemblId of the drug for which to retrieve treatable phenotypes information."
+                },
+                "required": [
+                    "chemblId"
+                ]
             }
         },
         "query_schema": "\n    query drugIndications($chemblId: String!) {\n      drug(chemblId: $chemblId) {\n     id\n    name\n        indications {\n          rows {\n            disease {\n              id\n              name\n              }\n      maxPhaseForIndication\n     references {\n       source\n        }\n         }\n        }\n      }\n    }\n    ",
@@ -414,9 +444,11 @@
             "properties": {
                 "ensemblId": {
                     "type": "string",
-                    "description": "The Ensembl ID of the target for which to retrieve Gene Ontology annotations.",
-                    "required": true
-                }
+                    "description": "The Ensembl ID of the target for which to retrieve Gene Ontology annotations."
+                },
+                "required": [
+                    "ensemblId"
+                ]
             }
         },
         "query_schema": "\n      query targetGeneOntology($ensemblId: String!) {\n        target(ensemblId: $ensemblId) {\n          id\n          approvedSymbol\n          geneOntology {\n            aspect\n            evidence\n            geneProduct\n            source\n            term {\n              id\n              name\n            }\n          }\n        }\n      }\n    ",
@@ -436,9 +468,11 @@
             "properties": {
                 "ensemblId": {
                     "type": "string",
-                    "description": "The Ensembl ID of the target for which to retrieve homologues.",
-                    "required": true
-                }
+                    "description": "The Ensembl ID of the target for which to retrieve homologues."
+                },
+                "required": [
+                    "ensemblId"
+                ]
             }
         },
         "query_schema": "\n      query targetHomologues($ensemblId: String!) {\n        target(ensemblId: $ensemblId) {\n          id\n          approvedSymbol\n          homologues {\n            homologyType\n            queryPercentageIdentity\n            speciesId\n            speciesName\n            targetGeneId\n            targetGeneSymbol\n            targetPercentageIdentity\n            isHighConfidence\n          }\n        }\n      }\n    ",
@@ -458,9 +492,11 @@
             "properties": {
                 "ensemblId": {
                     "type": "string",
-                    "description": "The Ensembl ID of the target for which to retrieve safety liabilities.",
-                    "required": true
-                }
+                    "description": "The Ensembl ID of the target for which to retrieve safety liabilities."
+                },
+                "required": [
+                    "ensemblId"
+                ]
             }
         },
         "query_schema": "\n      query targetSafetyLiabilities($ensemblId: String!) {\n        target(ensemblId: $ensemblId) {\n          id\n          approvedSymbol\n          safetyLiabilities {\n            event\n            eventId\n            biosamples {\n              cellFormat\n              cellLabel\n              tissueLabel\n              tissueId\n            }\n            effects {\n              dosing\n              direction\n            }\n            studies {\n              name\n              type\n              description\n            }\n            datasource\n            literature\n          }\n        }\n      }\n    ",
@@ -482,9 +518,11 @@
             "properties": {
                 "ensemblId": {
                     "type": "string",
-                    "description": "The Ensembl ID of the target.",
-                    "required": true
-                }
+                    "description": "The Ensembl ID of the target."
+                },
+                "required": [
+                    "ensemblId"
+                ]
             }
         },
         "query_schema": "\n      query fetchBiologicalModels($ensemblId: String!) {\n        target(ensemblId: $ensemblId) {\n          id\n          approvedSymbol\n          mousePhenotypes {\n            biologicalModels {\n              allelicComposition\n              geneticBackground\n              id\n              literature\n            }\n          }\n        }\n      }\n    ",
@@ -504,9 +542,11 @@
             "properties": {
                 "ensemblId": {
                     "type": "string",
-                    "description": "The Ensembl ID of the target for which to retrieve genomic location information.",
-                    "required": true
-                }
+                    "description": "The Ensembl ID of the target for which to retrieve genomic location information."
+                },
+                "required": [
+                    "ensemblId"
+                ]
             }
         },
         "query_schema": "\n      query targetGenomicLocation($ensemblId: String!) {\n        target(ensemblId: $ensemblId) {\n          id\n          approvedSymbol\n          genomicLocation {\n            chromosome\n            start\n            end\n            strand\n          }\n        }\n      }\n    ",
@@ -526,9 +566,11 @@
             "properties": {
                 "ensemblId": {
                     "type": "string",
-                    "description": "The ensemblId of a target.",
-                    "required": true
-                }
+                    "description": "The ensemblId of a target."
+                },
+                "required": [
+                    "ensemblId"
+                ]
             }
         },
         "query_schema": "\n      query targetSubcellularLocations($ensemblId: String!) {\n        target(ensemblId: $ensemblId) {\n          id\n          approvedSymbol\n          subcellularLocations {\n            location\n            source\n            termSL\n            labelSL\n          }\n        }\n      }\n    ",
@@ -548,9 +590,11 @@
             "properties": {
                 "ensemblId": {
                     "type": "string",
-                    "description": "The Ensembl ID of the target.",
-                    "required": true
-                }
+                    "description": "The Ensembl ID of the target."
+                },
+                "required": [
+                    "ensemblId"
+                ]
             }
         },
         "query_schema": "\n      query retrieveTargetSynonyms($ensemblId: String!) {\n        target(ensemblId: $ensemblId) {\n          id\n          approvedSymbol\n          synonyms {\n            label\n            source\n          }\n          symbolSynonyms {\n            label\n            source\n          }\n          nameSynonyms {\n            label\n            source\n          }\n        }\n      }\n    ",
@@ -570,9 +614,11 @@
             "properties": {
                 "ensemblId": {
                     "type": "string",
-                    "description": "The Ensembl ID of the target.",
-                    "required": true
-                }
+                    "description": "The Ensembl ID of the target."
+                },
+                "required": [
+                    "ensemblId"
+                ]
             }
         },
         "query_schema": "\n      query targetTractabilityAssessment($ensemblId: String!) {\n        target(ensemblId: $ensemblId) {\n          id\n          approvedSymbol\n          tractability {\n            label\n            modality\n            value\n          }\n        }\n      }\n    ",
@@ -593,9 +639,11 @@
             "properties": {
                 "ensemblId": {
                     "type": "string",
-                    "description": "The Ensembl ID of the target.",
-                    "required": true
-                }
+                    "description": "The Ensembl ID of the target."
+                },
+                "required": [
+                    "ensemblId"
+                ]
             }
         },
         "query_schema": "\n      query fetchTargetClasses($ensemblId: String!) {\n        target(ensemblId: $ensemblId) {\n          id\n          approvedSymbol\n          targetClass {\n            id\n            label\n            level\n          }\n        }\n      }\n    ",
@@ -615,9 +663,11 @@
             "properties": {
                 "ensemblId": {
                     "type": "string",
-                    "description": "The Ensembl ID of the target.",
-                    "required": true
-                }
+                    "description": "The Ensembl ID of the target."
+                },
+                "required": [
+                    "ensemblId"
+                ]
             }
         },
         "query_schema": "\n      query fetchTargetEnablingPackages($ensemblId: String!) {\n        target(ensemblId: $ensemblId) {\n          id\n          approvedSymbol\n          tep {\n            name\n            uri\n            therapeuticArea\n            description\n          }\n        }\n      }\n    ",
@@ -645,26 +695,29 @@
             "properties": {
                 "ensemblId": {
                     "type": "string",
-                    "description": "The Ensembl ID of the target.",
-                    "required": true
+                    "description": "The Ensembl ID of the target."
                 },
                 "page": {
                     "type": "object",
                     "properties": {
                         "index": {
                             "type": "integer",
-                            "description": "The index of the page to retrieve.",
-                            "required": true
+                            "description": "The index of the page to retrieve."
                         },
                         "size": {
                             "type": "integer",
-                            "description": "The number of items per page.",
-                            "required": true
-                        }
+                            "description": "The number of items per page."
+                        },
+                        "required": [
+                            "index",
+                            "size"
+                        ]
                     },
-                    "description": "Pagination parameters.",
-                    "required": false
-                }
+                    "description": "Pagination parameters."
+                },
+                "required": [
+                    "ensemblId"
+                ]
             }
         },
         "query_schema": "\n      query targetInteractions($ensemblId: String!, $page: Pagination!) {\n        target(ensemblId: $ensemblId) {\n          id\n          approvedSymbol\n          interactions(page: $page) {\n            count\n            rows {\n              intA\n              targetA {\n              id\n          approvedSymbol\n        }\n        intB\n        targetB {\n          id\n          approvedSymbol\n        }\n              score\n              sourceDatabase\n              evidences {\n                evidenceScore\n                pubmedId\n                interactionDetectionMethodShortName\n              }\n            }\n          }\n        }\n      }\n    ",
@@ -678,9 +731,11 @@
             "properties": {
                 "efoId": {
                     "type": "string",
-                    "description": "The EFO ID of the disease.",
-                    "required": true
-                }
+                    "description": "The EFO ID of the disease."
+                },
+                "required": [
+                    "efoId"
+                ]
             }
         },
         "query_schema": "\n      query getDiseaseDetailsByEfoId($efoId: String!) {\n        disease(efoId: $efoId) {\n          id\n          name\n          ancestors\n          parents {\n            id\n            name\n          }\n          }\n      }\n ",
@@ -700,9 +755,11 @@
             "properties": {
                 "efoId": {
                     "type": "string",
-                    "description": "The EFO ID of the disease.",
-                    "required": true
-                }
+                    "description": "The EFO ID of the disease."
+                },
+                "required": [
+                    "efoId"
+                ]
             }
         },
         "query_schema": "\n      query getDiseaseDetailsByEfoId($efoId: String!) {\n        disease(efoId: $efoId) {\n          id\n          name\n          descendants\n          children {\n            id\n            name\n          }\n          }\n       }\n",
@@ -722,9 +779,11 @@
             "properties": {
                 "efoId": {
                     "type": "string",
-                    "description": "The EFO ID of the disease.",
-                    "required": true
-                }
+                    "description": "The EFO ID of the disease."
+                },
+                "required": [
+                    "efoId"
+                ]
             }
         },
         "query_schema": "\n      query getDiseaseDetailsByEfoId($efoId: String!) {\n        disease(efoId: $efoId) {\n          id\n          name\n          directLocationIds\n          indirectLocationIds\n          directLocations {\n            id\n            name\n          }\n          indirectLocations {\n            id\n            name\n          }\n        }\n      }\n    ",
@@ -744,9 +803,11 @@
             "properties": {
                 "efoId": {
                     "type": "string",
-                    "description": "The EFO ID of the disease.",
-                    "required": true
-                }
+                    "description": "The EFO ID of the disease."
+                },
+                "required": [
+                    "efoId"
+                ]
             }
         },
         "query_schema": "\n      query getDiseaseDetailsByEfoId($efoId: String!) {\n        disease(efoId: $efoId) {\n          id\n          name\n        synonyms {\n            relation\n            terms\n          }\n      }\n     }\n",
@@ -766,9 +827,11 @@
             "properties": {
                 "efoId": {
                     "type": "string",
-                    "description": "The EFO ID of the disease.",
-                    "required": true
-                }
+                    "description": "The EFO ID of the disease."
+                },
+                "required": [
+                    "efoId"
+                ]
             }
         },
         "query_schema": "\n      query getDiseaseDetailsByEfoId($efoId: String!) {\n        disease(efoId: $efoId) {\n          id\n          name\n          description\n          dbXRefs\n          obsoleteTerms\n          isTherapeuticArea\n        }\n      }\n    ",
@@ -788,9 +851,11 @@
             "properties": {
                 "efoId": {
                     "type": "string",
-                    "description": "The EFO ID of the disease.",
-                    "required": true
-                }
+                    "description": "The EFO ID of the disease."
+                },
+                "required": [
+                    "efoId"
+                ]
             }
         },
         "query_schema": "\n      query diseaseTherapeuticAreas($efoId: String!) {\n        disease(efoId: $efoId) {\n          id\n          name\n          therapeuticAreas {\n            id\n            name\n          }\n        }\n      }\n    ",
@@ -810,26 +875,29 @@
             "properties": {
                 "chemblId": {
                     "type": "string",
-                    "description": "The ChEMBL ID of the drug.",
-                    "required": true
+                    "description": "The ChEMBL ID of the drug."
                 },
                 "page": {
                     "type": "object",
                     "properties": {
                         "index": {
                             "type": "integer",
-                            "description": "Index of the page to fetch, starting from 0.",
-                            "required": true
+                            "description": "Index of the page to fetch, starting from 0."
                         },
                         "size": {
                             "type": "integer",
-                            "description": "Number of entries per page.",
-                            "required": true
-                        }
+                            "description": "Number of entries per page."
+                        },
+                        "required": [
+                            "index",
+                            "size"
+                        ]
                     },
-                    "description": "Pagination settings.",
-                    "required": false
-                }
+                    "description": "Pagination settings."
+                },
+                "required": [
+                    "chemblId"
+                ]
             }
         },
         "query_schema": "\n  query drugAdverseEvents($chemblId: String!, $page: Pagination!) {\n    drug(chemblId: $chemblId) {\n      id\n      name\n      adverseEvents(page: $page) {\n        count\n        criticalValue\n       rows {\n          name\n          meddraCode\n          count\n          logLR\n        }\n      }\n    }\n  }\n  ",
@@ -853,9 +921,11 @@
             "properties": {
                 "chemblId": {
                     "type": "string",
-                    "description": "The ChEMBL ID of the drug.",
-                    "required": true
-                }
+                    "description": "The ChEMBL ID of the drug."
+                },
+                "required": [
+                    "chemblId"
+                ]
             }
         },
         "query_schema": "\n      query retrieveMultipleDrugsInfo($chemblId: String!) {\n        drug(chemblId: $chemblId) {\n          id\n          name\n        knownDrugs {\n            uniqueDrugs\n            uniqueDiseases\n            uniqueTargets\n            count\n            cursor\n            rows {\n              approvedSymbol\n              approvedName\n              label\n              prefName\n              drugType\n              targetId\n              diseaseId\n              drugId\n              phase\n              mechanismOfAction\n              status\n              targetClass\n              references {\n                source\n                ids\n                urls\n              }\n              ctIds\n              urls {\n                url\n                name\n              }\n              disease {\n                id\n                name\n              }\n              target {\n                id\n                approvedSymbol\n              }\n              drug {\n                id\n                name\n              }\n            }\n          }\n        }\n      }\n    ",
@@ -875,9 +945,11 @@
             "properties": {
                 "chemblId": {
                     "type": "string",
-                    "description": "The ChEMBL ID of the drug.",
-                    "required": true
-                }
+                    "description": "The ChEMBL ID of the drug."
+                },
+                "required": [
+                    "chemblId"
+                ]
             }
         },
         "query_schema": "\n      query retrieveMultipleDrugsInfo($chemblId: String!) {\n        drug(chemblId: $chemblId) {\n          id\n          name\n          parentMolecule {\n            id\n            name\n          }\n          childMolecules {\n            id\n            name\n          }\n          }\n      }\n    ",
@@ -897,9 +969,11 @@
             "properties": {
                 "chemblId": {
                     "type": "string",
-                    "description": "The ChEMBL ID of the drug.",
-                    "required": true
-                }
+                    "description": "The ChEMBL ID of the drug."
+                },
+                "required": [
+                    "chemblId"
+                ]
             }
         },
         "query_schema": "\n      query retrieveMultipleDrugsInfo($chemblId: String!) {\n        drug(chemblId: $chemblId) {\n          id\n          name\n          approvedIndications\n          }\n      }\n    ",
@@ -919,9 +993,11 @@
             "properties": {
                 "chemblId": {
                     "type": "string",
-                    "description": "The ChEMBL ID of the drug.",
-                    "required": true
-                }
+                    "description": "The ChEMBL ID of the drug."
+                },
+                "required": [
+                    "chemblId"
+                ]
             }
         },
         "query_schema": "\n      query retrieveMultipleDrugsInfo($chemblId: String!) {\n        drug(chemblId: $chemblId) {\n          id\n          name\n          yearOfFirstApproval\n          drugType\n          crossReferences {\n            source\n            reference\n          }\n          maximumClinicalTrialPhase\n        }\n      }\n    ",
@@ -941,9 +1017,11 @@
             "properties": {
                 "chemblId": {
                     "type": "string",
-                    "description": "The ChEMBL ID of the drug.",
-                    "required": true
-                }
+                    "description": "The ChEMBL ID of the drug."
+                },
+                "required": [
+                    "chemblId"
+                ]
             }
         },
         "query_schema": "\n      query drugSynonyms($chemblId: String!) {\n        drug(chemblId: $chemblId) {\n          id\n          name\n          synonyms\n        }\n      }\n    ",
@@ -963,9 +1041,11 @@
             "properties": {
                 "chemblId": {
                     "type": "string",
-                    "description": "The ChEMBL ID of the drug.",
-                    "required": true
-                }
+                    "description": "The ChEMBL ID of the drug."
+                },
+                "required": [
+                    "chemblId"
+                ]
             }
         },
         "query_schema": "\n      query drugTradeNames($chemblId: String!) {\n        drug(chemblId: $chemblId) {\n          id\n          name\n          tradeNames\n        }\n      }\n    ",
@@ -985,9 +1065,11 @@
             "properties": {
                 "chemblId": {
                     "type": "string",
-                    "description": "The ChEMBL ID of the drug.",
-                    "required": true
-                }
+                    "description": "The ChEMBL ID of the drug."
+                },
+                "required": [
+                    "chemblId"
+                ]
             }
         },
         "query_schema": "\n      query drugApprovalStatus($chemblId: String!) {\n        drug(chemblId: $chemblId) {\n          id\n          name\n          isApproved\n        }\n      }\n    ",
@@ -1007,9 +1089,11 @@
             "properties": {
                 "ensemblId": {
                     "type": "string",
-                    "description": "The Ensembl ID of the target for which to retrieve chemical probes.",
-                    "required": true
-                }
+                    "description": "The Ensembl ID of the target for which to retrieve chemical probes."
+                },
+                "required": [
+                    "ensemblId"
+                ]
             }
         },
         "query_schema": "\n      query getTargetChemicalProbes($ensemblId: String!) {\n        target(ensemblId: $ensemblId) {\n          chemicalProbes {\n            id\n            control\n            drugId\n            mechanismOfAction\n            isHighQuality\n            origin\n            probeMinerScore\n            probesDrugsScore\n            scoreInCells\n            scoreInOrganisms\n            targetFromSourceId\n            urls {\n              niceName\n              url\n            }\n          }\n        }\n      }\n    ",
@@ -1038,8 +1122,7 @@
             "properties": {
                 "chemblId": {
                     "type": "string",
-                    "description": "The ChEMBL ID of the drug.",
-                    "required": true
+                    "description": "The ChEMBL ID of the drug."
                 },
                 "page": {
                     "type": "object",
@@ -1047,17 +1130,21 @@
                     "properties": {
                         "index": {
                             "type": "integer",
-                            "description": "Pagination index.",
-                            "required": true
+                            "description": "Pagination index."
                         },
                         "size": {
                             "type": "integer",
-                            "description": "Number of records to fetch per page.",
-                            "required": true
-                        }
-                    },
-                    "required": false
-                }
+                            "description": "Number of records to fetch per page."
+                        },
+                        "required": [
+                            "index",
+                            "size"
+                        ]
+                    }
+                },
+                "required": [
+                    "chemblId"
+                ]
             }
         },
         "query_schema": "\n      query drugPharmacogenomicsData($chemblId: String!, $page: Pagination!) {\n        drug(chemblId: $chemblId) {\n          id\n          name\n          pharmacogenomics(page: $page) {\n            datasourceId\n            datatypeId\n            genotype\n            evidenceLevel\n            genotypeAnnotationText\n            genotypeId\n            haplotypeFromSourceId\n            haplotypeId\n            literature\n            pgxCategory\n            phenotypeFromSourceId\n            phenotypeText\n            studyId\n            targetFromSourceId\n            variantFunctionalConsequenceId\n            variantRsId\n            isDirectTarget\n            variantFunctionalConsequence {\n              id\n              label\n            }\n            drugs {\n              drugId\n              drug {\n        name\n      }\n            }\n            target {\n              id\n              approvedSymbol\n            }\n          }\n        }\n      }\n    ",
@@ -1071,19 +1158,20 @@
             "properties": {
                 "ensemblId": {
                     "type": "string",
-                    "description": "The Ensembl ID of the target.",
-                    "required": true
+                    "description": "The Ensembl ID of the target."
                 },
                 "size": {
                     "type": "integer",
-                    "description": "Number of entries to fetch.",
-                    "required": true
+                    "description": "Number of entries to fetch."
                 },
                 "cursor": {
                     "type": "string",
-                    "description": "Cursor for pagination.",
-                    "required": false
-                }
+                    "description": "Cursor for pagination."
+                },
+                "required": [
+                    "ensemblId",
+                    "size"
+                ]
             }
         },
         "query_schema": "\n      query targetKnownDrugs($ensemblId: String!, $size: Int!, $cursor: String) {\n        target(ensemblId: $ensemblId) {\n          id\n          approvedSymbol\n          knownDrugs(size: $size, cursor: $cursor) {\n            count\n            rows {\n              drug {\n                id\n                name\n                tradeNames\n                maximumClinicalTrialPhase\n                isApproved\n                hasBeenWithdrawn\n              }\n              phase\n              status\n              mechanismOfAction\n              disease {\n                id\n                name\n              }\n            }\n          }\n        }\n      }\n    ",
@@ -1105,9 +1193,11 @@
             "properties": {
                 "chemblId": {
                     "type": "string",
-                    "description": "The ChEMBL ID of the drug.",
-                    "required": true
-                }
+                    "description": "The ChEMBL ID of the drug."
+                },
+                "required": [
+                    "chemblId"
+                ]
             }
         },
         "query_schema": "\n      query fetchLinkedDiseasesForDrug($chemblId: String!) {\n        drug(chemblId: $chemblId) {\n          id\n          name\n          linkedDiseases {\n            count\n            rows {\n              id\n              name\n              description\n            }\n          }\n        }\n      }\n    ",
@@ -1128,9 +1218,11 @@
             "properties": {
                 "chemblId": {
                     "type": "string",
-                    "description": "The ChEMBL ID of the drug.",
-                    "required": true
-                }
+                    "description": "The ChEMBL ID of the drug."
+                },
+                "required": [
+                    "chemblId"
+                ]
             }
         },
         "query_schema": "\n      query fetchLinkedTargetsForDrug($chemblId: String!) {\n        drug(chemblId: $chemblId) {\n          id\n          name\n          linkedTargets {\n            count\n            rows {\n              id\n              approvedSymbol\n              approvedName\n            }\n          }\n        }\n      }\n    ",
@@ -1151,16 +1243,14 @@
             "properties": {
                 "queryString": {
                     "type": "string",
-                    "description": "The search string for querying information.",
-                    "required": true
+                    "description": "The search string for querying information."
                 },
                 "entityNames": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "List of entity names to search for (e.g., target, disease, drug).",
-                    "required": false
+                    "description": "List of entity names to search for (e.g., target, disease, drug)."
                 },
                 "page": {
                     "type": "object",
@@ -1176,9 +1266,11 @@
                             "required": "True"
                         }
                     },
-                    "description": "Pagination settings with index and size.",
-                    "required": false
-                }
+                    "description": "Pagination settings with index and size."
+                },
+                "required": [
+                    "queryString"
+                ]
             }
         },
         "query_schema": "\n      query multiEntitySearch($queryString: String!, $entityNames: [String!], $page: Pagination) {\n        search(queryString: $queryString, entityNames: $entityNames, page: $page) {\n          total\n          hits {\n            id\n            entity\n            description\n            name\n            score\n          }\n        }\n      }\n    ",
@@ -1202,9 +1294,11 @@
                     "items": {
                         "type": "string"
                     },
-                    "description": "A list of Gene Ontology (GO) IDs to fetch the corresponding terms.",
-                    "required": true
-                }
+                    "description": "A list of Gene Ontology (GO) IDs to fetch the corresponding terms."
+                },
+                "required": [
+                    "goIds"
+                ]
             }
         },
         "query_schema": "\n      query fetchGeneOntologyTerms($goIds: [String!]!) {\n        geneOntologyTerms(goIds: $goIds) {\n          id\n          name\n        }\n      }\n    ",
@@ -1224,9 +1318,11 @@
             "properties": {
                 "ensemblId": {
                     "type": "string",
-                    "description": "The Ensembl ID of the target.",
-                    "required": true
-                }
+                    "description": "The Ensembl ID of the target."
+                },
+                "required": [
+                    "ensemblId"
+                ]
             }
         },
         "query_schema": "\n      query targetConstraintInfo($ensemblId: String!) {\n        target(ensemblId: $ensemblId) {\n          id\n          approvedSymbol\n          geneticConstraint {\n            constraintType\n            exp\n            obs\n            oe\n            oeLower\n            oeUpper\n            score\n            upperBin\n            upperBin6\n            upperRank\n          }\n        }\n      }\n    ",
@@ -1247,37 +1343,34 @@
             "properties": {
                 "entityId": {
                     "type": "string",
-                    "description": "The ID of the entity (efoId).",
-                    "required": true
+                    "description": "The ID of the entity (efoId)."
                 },
                 "additionalIds": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "List of additional IDs to include in the search.",
-                    "required": false
+                    "description": "List of additional IDs to include in the search."
                 },
                 "startYear": {
                     "type": "integer",
-                    "description": "Year at the lower end of the filter.",
-                    "required": false
+                    "description": "Year at the lower end of the filter."
                 },
                 "startMonth": {
                     "type": "integer",
-                    "description": "Month at the lower end of the filter.",
-                    "required": false
+                    "description": "Month at the lower end of the filter."
                 },
                 "endYear": {
                     "type": "integer",
-                    "description": "Year at the higher end of the filter.",
-                    "required": false
+                    "description": "Year at the higher end of the filter."
                 },
                 "endMonth": {
                     "type": "integer",
-                    "description": "Month at the higher end of the filter.",
-                    "required": false
-                }
+                    "description": "Month at the higher end of the filter."
+                },
+                "required": [
+                    "entityId"
+                ]
             }
         },
         "query_schema": "\n      query entityPublications($entityId: String!, $additionalIds: [String!], $startYear: Int, $startMonth: Int, $endYear: Int, $endMonth: Int) {\n        disease(efoId: $entityId) {\n          id\n          name\n          literatureOcurrences(additionalIds: $additionalIds, startYear: $startYear, startMonth: $startMonth, endYear: $endYear, endMonth: $endMonth) {\n            count\n            filteredCount\n            earliestPubYear\n            rows {\n              pmid\n              pmcid\n              publicationDate\n              sentences {\n                section\n                matches {\n                  mappedId\n                  matchedLabel\n                  sectionStart\n                  sectionEnd\n                  startInSentence\n                  endInSentence\n                  matchedType\n                }\n              }\n            }\n          }\n        }\n      }\n    ",
@@ -1297,37 +1390,34 @@
             "properties": {
                 "entityId": {
                     "type": "string",
-                    "description": "The ID of the entity (ensemblID).",
-                    "required": true
+                    "description": "The ID of the entity (ensemblID)."
                 },
                 "additionalIds": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "List of additional IDs to include in the search.",
-                    "required": false
+                    "description": "List of additional IDs to include in the search."
                 },
                 "startYear": {
                     "type": "integer",
-                    "description": "Year at the lower end of the filter.",
-                    "required": false
+                    "description": "Year at the lower end of the filter."
                 },
                 "startMonth": {
                     "type": "integer",
-                    "description": "Month at the lower end of the filter.",
-                    "required": false
+                    "description": "Month at the lower end of the filter."
                 },
                 "endYear": {
                     "type": "integer",
-                    "description": "Year at the higher end of the filter.",
-                    "required": false
+                    "description": "Year at the higher end of the filter."
                 },
                 "endMonth": {
                     "type": "integer",
-                    "description": "Month at the higher end of the filter.",
-                    "required": false
-                }
+                    "description": "Month at the higher end of the filter."
+                },
+                "required": [
+                    "entityId"
+                ]
             }
         },
         "query_schema": "\n      query entityPublications($entityId: String!, $additionalIds: [String!], $startYear: Int, $startMonth: Int, $endYear: Int, $endMonth: Int) {\n        target(ensemblId: $entityId) {\n          id\n          approvedSymbol\n          literatureOcurrences(additionalIds: $additionalIds, startYear: $startYear, startMonth: $startMonth, endYear: $endYear, endMonth: $endMonth) {\n            count\n            filteredCount\n            earliestPubYear\n            rows {\n              pmid\n              pmcid\n              publicationDate\n              sentences {\n                section\n                matches {\n                  mappedId\n                  matchedLabel\n                  sectionStart\n                  sectionEnd\n                  startInSentence\n                  endInSentence\n                  matchedType\n                }\n              }\n            }\n          }\n        }\n      }\n    ",
@@ -1347,37 +1437,34 @@
             "properties": {
                 "entityId": {
                     "type": "string",
-                    "description": "The ID of the entity (chemblId).",
-                    "required": true
+                    "description": "The ID of the entity (chemblId)."
                 },
                 "additionalIds": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "List of additional IDs to include in the search.",
-                    "required": false
+                    "description": "List of additional IDs to include in the search."
                 },
                 "startYear": {
                     "type": "integer",
-                    "description": "Year at the lower end of the filter.",
-                    "required": false
+                    "description": "Year at the lower end of the filter."
                 },
                 "startMonth": {
                     "type": "integer",
-                    "description": "Month at the lower end of the filter.",
-                    "required": false
+                    "description": "Month at the lower end of the filter."
                 },
                 "endYear": {
                     "type": "integer",
-                    "description": "Year at the higher end of the filter.",
-                    "required": false
+                    "description": "Year at the higher end of the filter."
                 },
                 "endMonth": {
                     "type": "integer",
-                    "description": "Month at the higher end of the filter.",
-                    "required": false
-                }
+                    "description": "Month at the higher end of the filter."
+                },
+                "required": [
+                    "entityId"
+                ]
             }
         },
         "query_schema": "\n      query entityPublications($entityId: String!, $additionalIds: [String!], $startYear: Int, $startMonth: Int, $endYear: Int, $endMonth: Int) {\n        drug(chemblId: $entityId) {\n          id\n          name\n          literatureOcurrences(additionalIds: $additionalIds, startYear: $startYear, startMonth: $startMonth, endYear: $endYear, endMonth: $endMonth) {\n            count\n            filteredCount\n            earliestPubYear\n            rows {\n              pmid\n              pmcid\n              publicationDate\n              sentences {\n                section\n                matches {\n                  mappedId\n                  matchedLabel\n                  sectionStart\n                  sectionEnd\n                  startInSentence\n                  endInSentence\n                  matchedType\n                }\n              }\n            }\n          }\n        }\n      }\n    ",
@@ -1397,9 +1484,11 @@
             "properties": {
                 "targetName": {
                     "type": "string",
-                    "description": "The name of the target for which the ID is required.",
-                    "required": true
-                }
+                    "description": "The name of the target for which the ID is required."
+                },
+                "required": [
+                    "targetName"
+                ]
             }
         },
         "query_schema": "\n        query getTargetIdByName($targetName: String!) {\n            search(queryString: $targetName, entityNames: [\"target\"]) {\n                hits {\n                    id\n          name\n     description\n                }\n            }\n        }\n    ",
