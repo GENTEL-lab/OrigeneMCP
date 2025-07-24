@@ -14,19 +14,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -57,19 +57,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -93,19 +93,19 @@
             "properties": {
                 "abuse_info": {
                     "type": "string",
-                    "description": "Information about the types of abuse that can occur with the drug.",
-                    "required": true
+                    "description": "Information about the types of abuse that can occur with the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "abuse_info"
+                ]
             }
         },
         "fields": {
@@ -135,19 +135,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -177,19 +177,19 @@
             "properties": {
                 "accessory_name": {
                     "type": "string",
-                    "description": "The name or part of the name of the accessory.",
-                    "required": true
+                    "description": "The name or part of the name of the accessory."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "accessory_name"
+                ]
             }
         },
         "fields": {
@@ -218,19 +218,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -259,19 +259,19 @@
             "properties": {
                 "active_ingredient": {
                     "type": "string",
-                    "description": "The active ingredient in the drug product.",
-                    "required": true
+                    "description": "The active ingredient in the drug product."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "active_ingredient"
+                ]
             }
         },
         "fields": {
@@ -301,19 +301,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -350,19 +350,19 @@
             "properties": {
                 "application_manufacturer_or_NDC_info": {
                     "type": "string",
-                    "description": "FDA application, manufacturer, or NDC number info",
-                    "required": true
+                    "description": "FDA application, manufacturer, or NDC number info"
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "application_manufacturer_or_NDC_info"
+                ]
             }
         },
         "fields": {
@@ -397,19 +397,19 @@
             "properties": {
                 "adverse_reaction": {
                     "type": "string",
-                    "description": "The adverse reaction to search for.",
-                    "required": true
+                    "description": "The adverse reaction to search for."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "adverse_reaction"
+                ]
             }
         },
         "fields": {
@@ -438,19 +438,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -480,19 +480,19 @@
             "properties": {
                 "alarm_type": {
                     "type": "string",
-                    "description": "The type of alarm to search for.",
-                    "required": true
+                    "description": "The type of alarm to search for."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "alarm_type"
+                ]
             }
         },
         "fields": {
@@ -523,19 +523,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -566,19 +566,19 @@
             "properties": {
                 "pharmacology_info": {
                     "type": "string",
-                    "description": "Information from studies of the drug in animals.",
-                    "required": true
+                    "description": "Information from studies of the drug in animals."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "pharmacology_info"
+                ]
             }
         },
         "fields": {
@@ -607,19 +607,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -648,19 +648,19 @@
             "properties": {
                 "condition": {
                     "type": "string",
-                    "description": "The condition or symptom that requires consulting a doctor.",
-                    "required": true
+                    "description": "The condition or symptom that requires consulting a doctor."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "condition"
+                ]
             }
         },
         "fields": {
@@ -689,19 +689,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -730,19 +730,19 @@
             "properties": {
                 "interaction_info": {
                     "type": "string",
-                    "description": "Information about when a doctor or pharmacist should be consulted regarding drug interactions.",
-                    "required": true
+                    "description": "Information about when a doctor or pharmacist should be consulted regarding drug interactions."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "interaction_info"
+                ]
             }
         },
         "fields": {
@@ -773,19 +773,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -815,19 +815,19 @@
             "properties": {
                 "field_info": {
                     "type": "string",
-                    "description": "Information related to assembly or installation instructions.",
-                    "required": true
+                    "description": "Information related to assembly or installation instructions."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "field_info"
+                ]
             }
         },
         "fields": {
@@ -857,19 +857,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -899,19 +899,19 @@
             "properties": {
                 "warning_text": {
                     "type": "string",
-                    "description": "The text of the boxed warning to search for.",
-                    "required": true
+                    "description": "The text of the boxed warning to search for."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "warning_text"
+                ]
             }
         },
         "fields": {
@@ -942,19 +942,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -984,19 +984,19 @@
             "properties": {
                 "calibration_instructions": {
                     "type": "string",
-                    "description": "Instructions used for calibration of the drug.",
-                    "required": true
+                    "description": "Instructions used for calibration of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "calibration_instructions"
+                ]
             }
         },
         "fields": {
@@ -1026,19 +1026,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -1068,19 +1068,19 @@
             "properties": {
                 "carcinogenic_info": {
                     "type": "string",
-                    "description": "Information about carcinogenic, mutagenic, or fertility impairment potential.",
-                    "required": true
+                    "description": "Information about carcinogenic, mutagenic, or fertility impairment potential."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "carcinogenic_info"
+                ]
             }
         },
         "fields": {
@@ -1110,19 +1110,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -1152,19 +1152,19 @@
             "properties": {
                 "field_info": {
                     "type": "string",
-                    "description": "The specific field information to search for.",
-                    "required": true
+                    "description": "The specific field information to search for."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "field_info"
+                ]
             }
         },
         "fields": {
@@ -1196,19 +1196,19 @@
             "properties": {
                 "clinical_pharmacology": {
                     "type": "string",
-                    "description": "Information about the clinical pharmacology and actions of the drug in humans.",
-                    "required": true
+                    "description": "Information about the clinical pharmacology and actions of the drug in humans."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "clinical_pharmacology"
+                ]
             }
         },
         "fields": {
@@ -1237,19 +1237,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -1279,19 +1279,19 @@
             "properties": {
                 "clinical_studies": {
                     "type": "string",
-                    "description": "Information related to clinical studies.",
-                    "required": true
+                    "description": "Information related to clinical studies."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "clinical_studies"
+                ]
             }
         },
         "fields": {
@@ -1320,19 +1320,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -1362,19 +1362,19 @@
             "properties": {
                 "contraindication_info": {
                     "type": "string",
-                    "description": "Information about situations in which the drug product is contraindicated.",
-                    "required": true
+                    "description": "Information about situations in which the drug product is contraindicated."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "contraindication_info"
+                ]
             }
         },
         "fields": {
@@ -1404,19 +1404,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -1446,19 +1446,19 @@
             "properties": {
                 "controlled_substance_schedule": {
                     "type": "string",
-                    "description": "The schedule in which the drug is controlled by the Drug Enforcement Administration.",
-                    "required": true
+                    "description": "The schedule in which the drug is controlled by the Drug Enforcement Administration."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "controlled_substance_schedule"
+                ]
             }
         },
         "fields": {
@@ -1488,19 +1488,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -1530,19 +1530,19 @@
             "properties": {
                 "dependence_info": {
                     "type": "string",
-                    "description": "Information related to psychological and physical dependence of the drug.",
-                    "required": true
+                    "description": "Information related to psychological and physical dependence of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "dependence_info"
+                ]
             }
         },
         "fields": {
@@ -1572,19 +1572,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -1614,19 +1614,19 @@
             "properties": {
                 "disposal_info": {
                     "type": "string",
-                    "description": "Information related to the disposal and waste handling of the drug.",
-                    "required": true
+                    "description": "Information related to the disposal and waste handling of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "disposal_info"
+                ]
             }
         },
         "fields": {
@@ -1656,19 +1656,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -1697,19 +1697,19 @@
             "properties": {
                 "dosage_info": {
                     "type": "string",
-                    "description": "Information about the drug product\u2019s dosage and administration recommendations.",
-                    "required": true
+                    "description": "Information about the drug product\u2019s dosage and administration recommendations."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "dosage_info"
+                ]
             }
         },
         "fields": {
@@ -1738,19 +1738,19 @@
             "properties": {
                 "dosage_forms_and_strengths": {
                     "type": "string",
-                    "description": "Information about the dosage forms and strengths of the drug.",
-                    "required": true
+                    "description": "Information about the dosage forms and strengths of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "dosage_forms_and_strengths"
+                ]
             }
         },
         "fields": {
@@ -1779,19 +1779,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -1821,19 +1821,19 @@
             "properties": {
                 "abuse_info": {
                     "type": "string",
-                    "description": "Information about drug abuse and dependence.",
-                    "required": true
+                    "description": "Information about drug abuse and dependence."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "abuse_info"
+                ]
             }
         },
         "fields": {
@@ -1863,19 +1863,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -1905,19 +1905,19 @@
             "properties": {
                 "lab_test_interference": {
                     "type": "string",
-                    "description": "Information about any known interference by the drug with laboratory tests.",
-                    "required": true
+                    "description": "Information about any known interference by the drug with laboratory tests."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "lab_test_interference"
+                ]
             }
         },
         "fields": {
@@ -1947,19 +1947,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -1989,19 +1989,19 @@
             "properties": {
                 "interaction_term": {
                     "type": "string",
-                    "description": "The term to search for in drug interactions.",
-                    "required": true
+                    "description": "The term to search for in drug interactions."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "interaction_term"
+                ]
             }
         },
         "fields": {
@@ -2031,19 +2031,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -2073,19 +2073,19 @@
             "properties": {
                 "effective_time": {
                     "type": "string",
-                    "description": "Date reference to the particular version of the labeling document in YYYYmmdd format.",
-                    "required": true
+                    "description": "Date reference to the particular version of the labeling document in YYYYmmdd format."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "effective_time"
+                ]
             }
         },
         "fields": {
@@ -2115,19 +2115,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -2157,19 +2157,19 @@
             "properties": {
                 "environmental_warning": {
                     "type": "string",
-                    "description": "The environmental warning text to search for.",
-                    "required": true
+                    "description": "The environmental warning text to search for."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "environmental_warning"
+                ]
             }
         },
         "fields": {
@@ -2198,19 +2198,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -2240,19 +2240,19 @@
             "properties": {
                 "field_info": {
                     "type": "string",
-                    "description": "Information related to food safety warnings.",
-                    "required": true
+                    "description": "Information related to food safety warnings."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "field_info"
+                ]
             }
         },
         "fields": {
@@ -2281,19 +2281,19 @@
             "properties": {
                 "precaution_info": {
                     "type": "string",
-                    "description": "Information about any special care to be exercised for safe and effective use of the drug.",
-                    "required": true
+                    "description": "Information about any special care to be exercised for safe and effective use of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "precaution_info"
+                ]
             }
         },
         "fields": {
@@ -2323,19 +2323,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -2364,19 +2364,19 @@
             "properties": {
                 "geriatric_use": {
                     "type": "string",
-                    "description": "Information about any limitations on any geriatric indications, needs for specific monitoring, hazards associated with use of the drug in the geriatric population.",
-                    "required": true
+                    "description": "Information about any limitations on any geriatric indications, needs for specific monitoring, hazards associated with use of the drug in the geriatric population."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "geriatric_use"
+                ]
             }
         },
         "fields": {
@@ -2406,19 +2406,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -2448,19 +2448,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -2490,19 +2490,19 @@
             "properties": {
                 "letter_info": {
                     "type": "string",
-                    "description": "Information about the specific dear health care provider letters.",
-                    "required": true
+                    "description": "Information about the specific dear health care provider letters."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "letter_info"
+                ]
             }
         },
         "fields": {
@@ -2532,19 +2532,19 @@
             "properties": {
                 "health_claim": {
                     "type": "string",
-                    "description": "The health claim associated with the drug.",
-                    "required": true
+                    "description": "The health claim associated with the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "health_claim"
+                ]
             }
         },
         "fields": {
@@ -2573,19 +2573,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -2614,19 +2614,19 @@
             "properties": {
                 "document_id": {
                     "type": "string",
-                    "description": "The document ID, a globally unique identifier (GUID) for the particular revision of a labeling document.",
-                    "required": true
+                    "description": "The document ID, a globally unique identifier (GUID) for the particular revision of a labeling document."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "document_id"
+                ]
             }
         },
         "fields": {
@@ -2656,19 +2656,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -2698,19 +2698,19 @@
             "properties": {
                 "inactive_ingredient": {
                     "type": "string",
-                    "description": "The name of the inactive ingredient.",
-                    "required": true
+                    "description": "The name of the inactive ingredient."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "inactive_ingredient"
+                ]
             }
         },
         "fields": {
@@ -2739,19 +2739,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -2780,19 +2780,19 @@
             "properties": {
                 "indication": {
                     "type": "string",
-                    "description": "The indication or usage of the drug.",
-                    "required": true
+                    "description": "The indication or usage of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "indication"
+                ]
             }
         },
         "fields": {
@@ -2821,19 +2821,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -2863,19 +2863,19 @@
             "properties": {
                 "field_info": {
                     "type": "string",
-                    "description": "The specific information related to owners or caregivers to search for.",
-                    "required": true
+                    "description": "The specific information related to owners or caregivers to search for."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "field_info"
+                ]
             }
         },
         "fields": {
@@ -2904,19 +2904,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -2948,19 +2948,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -2989,19 +2989,19 @@
             "properties": {
                 "instructions_for_use": {
                     "type": "string",
-                    "description": "Information about safe handling and use of the drug product.",
-                    "required": true
+                    "description": "Information about safe handling and use of the drug product."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "instructions_for_use"
+                ]
             }
         },
         "fields": {
@@ -3030,19 +3030,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -3071,19 +3071,19 @@
             "properties": {
                 "intended_use_of_the_device": {
                     "type": "string",
-                    "description": "The intended use of the device.",
-                    "required": true
+                    "description": "The intended use of the device."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "intended_use_of_the_device"
+                ]
             }
         },
         "fields": {
@@ -3112,19 +3112,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -3154,19 +3154,19 @@
             "properties": {
                 "child_safety_info": {
                     "type": "string",
-                    "description": "Information pertaining to whether the product should be kept out of the reach of children.",
-                    "required": true
+                    "description": "Information pertaining to whether the product should be kept out of the reach of children."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "child_safety_info"
+                ]
             }
         },
         "fields": {
@@ -3197,19 +3197,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -3239,19 +3239,19 @@
             "properties": {
                 "labor_and_delivery_info": {
                     "type": "string",
-                    "description": "Information about the drug\u2019s use during labor or delivery.",
-                    "required": true
+                    "description": "Information about the drug\u2019s use during labor or delivery."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "labor_and_delivery_info"
+                ]
             }
         },
         "fields": {
@@ -3281,19 +3281,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -3323,19 +3323,19 @@
             "properties": {
                 "lab_test_info": {
                     "type": "string",
-                    "description": "Information related to laboratory tests.",
-                    "required": true
+                    "description": "Information related to laboratory tests."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "lab_test_info"
+                ]
             }
         },
         "fields": {
@@ -3364,19 +3364,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -3405,19 +3405,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -3447,19 +3447,19 @@
             "properties": {
                 "mechanism_info": {
                     "type": "string",
-                    "description": "Information related to the desired mechanism of action.",
-                    "required": true
+                    "description": "Information related to the desired mechanism of action."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "mechanism_info"
+                ]
             }
         },
         "fields": {
@@ -3489,19 +3489,19 @@
             "properties": {
                 "microbiology_info": {
                     "type": "string",
-                    "description": "Information related to the microbiology field.",
-                    "required": true
+                    "description": "Information related to the microbiology field."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "microbiology_info"
+                ]
             }
         },
         "fields": {
@@ -3531,19 +3531,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -3572,19 +3572,19 @@
             "properties": {
                 "toxicology_info": {
                     "type": "string",
-                    "description": "Information about toxicology in non-human subjects.",
-                    "required": true
+                    "description": "Information about toxicology in non-human subjects."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "toxicology_info"
+                ]
             }
         },
         "fields": {
@@ -3613,19 +3613,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -3654,19 +3654,19 @@
             "properties": {
                 "nonteratogenic_effects": {
                     "type": "string",
-                    "description": "Information about the drug\u2019s nonteratogenic effects.",
-                    "required": true
+                    "description": "Information about the drug\u2019s nonteratogenic effects."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "nonteratogenic_effects"
+                ]
             }
         },
         "fields": {
@@ -3695,19 +3695,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -3737,19 +3737,19 @@
             "properties": {
                 "nursing_mothers_info": {
                     "type": "string",
-                    "description": "Information about excretion of the drug in human milk and effects on the nursing infant.",
-                    "required": true
+                    "description": "Information about excretion of the drug in human milk and effects on the nursing infant."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "nursing_mothers_info"
+                ]
             }
         },
         "fields": {
@@ -3778,19 +3778,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -3819,19 +3819,19 @@
             "properties": {
                 "safety_info": {
                     "type": "string",
-                    "description": "Information about safe use and handling of the product.",
-                    "required": true
+                    "description": "Information about safe use and handling of the product."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "safety_info"
+                ]
             }
         },
         "fields": {
@@ -3861,19 +3861,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -3903,19 +3903,19 @@
             "properties": {
                 "overdosage_info": {
                     "type": "string",
-                    "description": "Information about signs, symptoms, and laboratory findings of acute overdosage.",
-                    "required": true
+                    "description": "Information about signs, symptoms, and laboratory findings of acute overdosage."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "overdosage_info"
+                ]
             }
         },
         "fields": {
@@ -3944,19 +3944,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -3985,19 +3985,19 @@
             "properties": {
                 "display_panel_content": {
                     "type": "string",
-                    "description": "The content of the principal display panel of the product package.",
-                    "required": true
+                    "description": "The content of the principal display panel of the product package."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "display_panel_content"
+                ]
             }
         },
         "fields": {
@@ -4027,19 +4027,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -4069,19 +4069,19 @@
             "properties": {
                 "patient_info": {
                     "type": "string",
-                    "description": "Information or instructions to patients about safe use of the drug product.",
-                    "required": true
+                    "description": "Information or instructions to patients about safe use of the drug product."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "patient_info"
+                ]
             }
         },
         "fields": {
@@ -4111,19 +4111,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -4153,19 +4153,19 @@
             "properties": {
                 "pediatric_use_info": {
                     "type": "string",
-                    "description": "Information related to the safe and effective pediatric use of the drug.",
-                    "required": true
+                    "description": "Information related to the safe and effective pediatric use of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "pediatric_use_info"
+                ]
             }
         },
         "fields": {
@@ -4194,19 +4194,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -4236,19 +4236,19 @@
             "properties": {
                 "pharmacodynamics": {
                     "type": "string",
-                    "description": "Information about the biochemical or physiologic pharmacologic effects of the drug.",
-                    "required": true
+                    "description": "Information about the biochemical or physiologic pharmacologic effects of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "pharmacodynamics"
+                ]
             }
         },
         "fields": {
@@ -4277,19 +4277,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -4319,19 +4319,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -4361,19 +4361,19 @@
             "properties": {
                 "pharmacokinetics_info": {
                     "type": "string",
-                    "description": "Information about the clinically significant pharmacokinetics of a drug or active metabolites.",
-                    "required": true
+                    "description": "Information about the clinically significant pharmacokinetics of a drug or active metabolites."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "pharmacokinetics_info"
+                ]
             }
         },
         "fields": {
@@ -4403,19 +4403,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -4445,19 +4445,19 @@
             "properties": {
                 "precautions": {
                     "type": "string",
-                    "description": "Information about any special care to be exercised for safe and effective use of the drug.",
-                    "required": true
+                    "description": "Information about any special care to be exercised for safe and effective use of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "precautions"
+                ]
             }
         },
         "fields": {
@@ -4487,19 +4487,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -4528,19 +4528,19 @@
             "properties": {
                 "pregnancy_info": {
                     "type": "string",
-                    "description": "Information about the effects on pregnancy to search for.",
-                    "required": true
+                    "description": "Information about the effects on pregnancy to search for."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "pregnancy_info"
+                ]
             }
         },
         "fields": {
@@ -4570,19 +4570,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -4612,19 +4612,19 @@
             "properties": {
                 "pregnancy_info": {
                     "type": "string",
-                    "description": "Information related to pregnancy or breastfeeding.",
-                    "required": true
+                    "description": "Information related to pregnancy or breastfeeding."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "pregnancy_info"
+                ]
             }
         },
         "fields": {
@@ -4655,19 +4655,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -4699,19 +4699,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -4741,19 +4741,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -4782,19 +4782,19 @@
             "properties": {
                 "reference": {
                     "type": "string",
-                    "description": "The reference information to search for in the drug labeling.",
-                    "required": true
+                    "description": "The reference information to search for in the drug labeling."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "reference"
+                ]
             }
         },
         "fields": {
@@ -4824,19 +4824,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -4866,19 +4866,19 @@
             "properties": {
                 "residue_warning": {
                     "type": "string",
-                    "description": "The residue warning information to search for.",
-                    "required": true
+                    "description": "The residue warning information to search for."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "residue_warning"
+                ]
             }
         },
         "fields": {
@@ -4907,19 +4907,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -4948,19 +4948,19 @@
             "properties": {
                 "risk_info": {
                     "type": "string",
-                    "description": "Specific risk information to search for.",
-                    "required": true
+                    "description": "Specific risk information to search for."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "risk_info"
+                ]
             }
         },
         "fields": {
@@ -4990,19 +4990,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -5032,19 +5032,19 @@
             "properties": {
                 "route": {
                     "type": "string",
-                    "description": "The route of administration of the drug.",
-                    "required": true
+                    "description": "The route of administration of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "route"
+                ]
             }
         },
         "fields": {
@@ -5075,19 +5075,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -5118,19 +5118,19 @@
             "properties": {
                 "safe_handling_warning": {
                     "type": "string",
-                    "description": "The specific safe handling warning to search for.",
-                    "required": true
+                    "description": "The specific safe handling warning to search for."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "safe_handling_warning"
+                ]
             }
         },
         "fields": {
@@ -5159,19 +5159,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -5200,19 +5200,19 @@
             "properties": {
                 "set_id": {
                     "type": "string",
-                    "description": "The Set ID, a globally unique identifier for the labeling.",
-                    "required": true
+                    "description": "The Set ID, a globally unique identifier for the labeling."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "set_id"
+                ]
             }
         },
         "fields": {
@@ -5242,19 +5242,19 @@
             "properties": {
                 "spl_indexing_data_elements": {
                     "type": "string",
-                    "description": "The SPL indexing data elements to search for.",
-                    "required": true
+                    "description": "The SPL indexing data elements to search for."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "spl_indexing_data_elements"
+                ]
             }
         },
         "fields": {
@@ -5283,19 +5283,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -5325,19 +5325,19 @@
             "properties": {
                 "medguide_info": {
                     "type": "string",
-                    "description": "Information contained in the medication guide.",
-                    "required": true
+                    "description": "Information contained in the medication guide."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "medguide_info"
+                ]
             }
         },
         "fields": {
@@ -5368,19 +5368,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -5411,19 +5411,19 @@
             "properties": {
                 "patient_package_insert": {
                     "type": "string",
-                    "description": "Information necessary for patients to use the drug safely and effectively.",
-                    "required": true
+                    "description": "Information necessary for patients to use the drug safely and effectively."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "patient_package_insert"
+                ]
             }
         },
         "fields": {
@@ -5455,19 +5455,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -5497,19 +5497,19 @@
             "properties": {
                 "ingredient_name": {
                     "type": "string",
-                    "description": "The name of the ingredient to search for in drug products.",
-                    "required": true
+                    "description": "The name of the ingredient to search for in drug products."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "ingredient_name"
+                ]
             }
         },
         "fields": {
@@ -5539,19 +5539,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -5581,19 +5581,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -5623,19 +5623,19 @@
             "properties": {
                 "stop_use_info": {
                     "type": "string",
-                    "description": "Information about when use of the drug product should be discontinued immediately and a doctor consulted.",
-                    "required": true
+                    "description": "Information about when use of the drug product should be discontinued immediately and a doctor consulted."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "stop_use_info"
+                ]
             }
         },
         "fields": {
@@ -5665,19 +5665,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -5706,19 +5706,19 @@
             "properties": {
                 "storage_info": {
                     "type": "string",
-                    "description": "Information about the storage and handling of the drug product.",
-                    "required": true
+                    "description": "Information about the storage and handling of the drug product."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "storage_info"
+                ]
             }
         },
         "fields": {
@@ -5748,19 +5748,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -5789,19 +5789,19 @@
             "properties": {
                 "summary_text": {
                     "type": "string",
-                    "description": "Text to search within the summary of safety and effectiveness field.",
-                    "required": true
+                    "description": "Text to search within the summary of safety and effectiveness field."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "summary_text"
+                ]
             }
         },
         "fields": {
@@ -5830,19 +5830,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug (either brand name or generic name).",
-                    "required": true
+                    "description": "The name of the drug (either brand name or generic name)."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -5871,19 +5871,19 @@
             "properties": {
                 "teratogenic_effects": {
                     "type": "string",
-                    "description": "The teratogenic effects category to search for (e.g., Pregnancy category A, B, C, D, or X).",
-                    "required": true
+                    "description": "The teratogenic effects category to search for (e.g., Pregnancy category A, B, C, D, or X)."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "teratogenic_effects"
+                ]
             }
         },
         "fields": {
@@ -5912,19 +5912,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug (either brand name or generic name).",
-                    "required": true
+                    "description": "The name of the drug (either brand name or generic name)."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -5954,19 +5954,19 @@
             "properties": {
                 "population_use": {
                     "type": "string",
-                    "description": "The specific population use to search for (e.g., pregnant women, nursing mothers).",
-                    "required": true
+                    "description": "The specific population use to search for (e.g., pregnant women, nursing mothers)."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "population_use"
+                ]
             }
         },
         "fields": {
@@ -5998,19 +5998,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -6040,19 +6040,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The specific drug name.",
-                    "required": true
+                    "description": "The specific drug name."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -6082,19 +6082,19 @@
             "properties": {
                 "safety_warning": {
                     "type": "string",
-                    "description": "The specific safety warning to search for.",
-                    "required": true
+                    "description": "The specific safety warning to search for."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "safety_warning"
+                ]
             }
         },
         "fields": {
@@ -6124,19 +6124,19 @@
             "properties": {
                 "warning_text": {
                     "type": "string",
-                    "description": "The warning text to search for in the drug labeling.",
-                    "required": true
+                    "description": "The warning text to search for in the drug labeling."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "warning_text"
+                ]
             }
         },
         "fields": {
@@ -6168,19 +6168,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -6213,19 +6213,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -6255,19 +6255,19 @@
             "properties": {
                 "warnings_and_cautions_info": {
                     "type": "string",
-                    "description": "The warnings and cautions text to search for.",
-                    "required": true
+                    "description": "The warnings and cautions text to search for."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "warnings_and_cautions_info"
+                ]
             }
         },
         "fields": {
@@ -6297,19 +6297,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -6341,14 +6341,15 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The generic name or the brand name of the drug.",
-                    "required": true
+                    "description": "The generic name or the brand name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
-                }
+                    "description": "The number of records to return."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -6379,19 +6380,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -6420,19 +6421,19 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The name of the drug.",
-                    "required": true
+                    "description": "The name of the drug."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "The number of records to return.",
-                    "required": false
+                    "description": "The number of records to return."
                 },
                 "skip": {
                     "type": "integer",
-                    "description": "The number of records to skip.",
-                    "required": false
-                }
+                    "description": "The number of records to skip."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {
@@ -6461,9 +6462,11 @@
             "properties": {
                 "drug_name": {
                     "type": "string",
-                    "description": "The generic or brand name of the drug.",
-                    "required": true
-                }
+                    "description": "The generic or brand name of the drug."
+                },
+                "required": [
+                    "drug_name"
+                ]
             }
         },
         "fields": {

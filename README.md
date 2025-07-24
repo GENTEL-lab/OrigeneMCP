@@ -57,6 +57,7 @@ tool_packages = [
     "uniprot", "tcga", "ensembl", "ucsc", "fda_drug", "pdb",
     "monarch", "clinicaltrials", "dbsearch", "opentargets"
 ]
+tool_packages = [server+'_mcp' for server in tool_packages]
 
 mcp_servers = {
     package: {
@@ -128,6 +129,7 @@ tool_packages = [
     "uniprot", "tcga", "ensembl", "ucsc", "fda_drug", "pdb",
     "monarch", "clinicaltrials", "dbsearch", "opentargets"
 ]
+tool_packages = [server+'_mcp' for server in tool_packages]
 
 config = {
     "mcpServers": {
