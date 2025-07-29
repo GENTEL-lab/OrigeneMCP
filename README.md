@@ -1,10 +1,14 @@
 # OrigeneMCP
 
-**About OriGene**  
-OrigeneMCP is a core component of the [OriGene](https://github.com/GENTEL-lab/OriGene) ecosystem, a self-evolving multi-agent system designed to act as a virtual disease biologist. OriGene provides a unified platform for biomedical AI research and was officially launched at the 2025 WAIC.
+<!-- **About OriGene**   -->
+> OrigeneMCP is a core component of the [OriGene](https://github.com/GENTEL-lab/OriGene) ecosystem, a self-evolving multi-agent system designed to act as a virtual disease biologist. OriGene provides a unified platform for biomedical AI research and was officially launched at the 2025 WAIC. For more information, please visit the [OriGene official website](https://origene.lglab.ac.cn/).
 
-For more information, please visit the [OriGene official website](https://origene.lglab.ac.cn/).
-
+<p align="center">
+  | <a href="https://origene.lglab.ac.cn">Product</a> |
+  <a href="https://www.biorxiv.org/content/10.1101/2025.06.03.657658v1.full.pdf">Paper</a> |
+  <a href="https://github.com/GENTEL-lab/OriGene">OriGene Code</a> |
+  <a href="https://github.com/GENTEL-lab/OrigeneMCP">OrigeneMCP Code</a> |
+</p>
 
 ![Overview](./assets/OrigeneMCP-overview.jpg)
 
