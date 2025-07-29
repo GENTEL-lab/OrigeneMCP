@@ -10,20 +10,19 @@
                     "description": "List of phenotypes or symptoms",
                     "items": {
                         "type": "string",
-                        "description": "The HPO ID of the phenotype or symptom.",
-                        "required": true
+                        "description": "The HPO ID of the phenotype or symptom."
                     },
-                    "required": true
+                    "required": [
+                        "items"
+                    ]
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "Number of entries to fetch.",
-                    "required": false
+                    "description": "Number of entries to fetch."
                 },
                 "offset": {
                     "type": "integer",
-                    "description": "Number of initial entries to skip.",
-                    "required": false
+                    "description": "Number of initial entries to skip."
                 }
             }
         },
@@ -57,9 +56,11 @@
             "properties": {
                 "id": {
                     "type": "string",
-                    "description": "The HPO ID of the phenotype or symptom.",
-                    "required": true
-                }
+                    "description": "The HPO ID of the phenotype or symptom."
+                },
+                "required": [
+                    "id"
+                ]
             }
         },
         "query_schema": {
@@ -83,19 +84,19 @@
             "properties": {
                 "query": {
                     "type": "string",
-                    "description": "One query phenotype or symptom.",
-                    "required": true
+                    "description": "One query phenotype or symptom."
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "Number of entries to fetch.",
-                    "required": false
+                    "description": "Number of entries to fetch."
                 },
                 "offset": {
                     "type": "integer",
-                    "description": "Number of initial entries to skip.",
-                    "required": false
-                }
+                    "description": "Number of initial entries to skip."
+                },
+                "required": [
+                    "query"
+                ]
             }
         },
         "query_schema": {
