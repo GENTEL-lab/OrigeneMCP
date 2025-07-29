@@ -1,5 +1,13 @@
 # OrigeneMCP
+
+**About OriGene**  
+OrigeneMCP is a core component of the [OriGene](https://github.com/GENTEL-lab/OriGene) ecosystem, a self-evolving multi-agent system designed to act as a virtual disease biologist. OriGene provides a unified platform for biomedical AI research and was officially launched at the 2025 WAIC.
+
+For more information, please visit the [OriGene official website](https://origene.lglab.ac.cn/).
+
+
 ![Overview](./assets/OrigeneMCP-overview.jpg)
+
 
 ## 1. OrigeneMCP Overview
 OrigeneMCP is the MCP toolkit for the [OriGene](https://github.com/GENTEL-lab/OriGene) project that integrates over **600** tools and multiple databases (including ChEMBL, PubChem, FDA, OpenTargets, NCBI, UniProt, PDB, Ensembl, UCSC, KEGG, STRING, TCGA, Monarch, ClinicalTrials, and more) into an advanced integrated MCP server platform, combining disease biology and drug discovery tools to enable comprehensive multi-dimensional information retrieval across small molecules, proteins, genes, diseases, and other biological entities, serving as a unified interface for accessing and analyzing complex biomedical data to accelerate therapeutic research and development.
