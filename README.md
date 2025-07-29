@@ -11,6 +11,13 @@
 </p>
 
 ## 1. OrigeneMCP Overview
+> Recent updates:
+> - **2025-07-28** 🚀 OriGene officially launched at WAIC 2025!
+> - **2025-07-22** 🔥 Integrated OrigeneMCP into the Bohrium AI for Science platform.
+> - **2025-07-19** 🔥 Integrated OrigeneMCP into CAMEL.
+> - **2025-07-18** 🚀 OrigeneMCP officially open-sourced!
+
+
 ![Overview](./assets/OrigeneMCP-overview.jpg)
 
 OrigeneMCP is the MCP toolkit for the [OriGene](https://github.com/GENTEL-lab/OriGene) project that integrates over **600** tools and multiple databases (including ChEMBL, PubChem, FDA, OpenTargets, NCBI, UniProt, PDB, Ensembl, UCSC, KEGG, STRING, TCGA, Monarch, ClinicalTrials, and more) into an advanced integrated MCP server platform, combining disease biology and drug discovery tools to enable comprehensive multi-dimensional information retrieval across small molecules, proteins, genes, diseases, and other biological entities, serving as a unified interface for accessing and analyzing complex biomedical data to accelerate therapeutic research and development.
@@ -57,6 +64,7 @@ uv run -m deploy.web
 * If you need to use Tavily search or Jina search, please configure the `tavily_api_key` or `jina_api_key` in file `local.conf.toml`;
 
 ## 3. Use OrigeneMCP
+### 3.1. Use locally deployed OrigeneMCP
 First, connect to OrigeneMCP and get all available tools.
 
 ```python
@@ -113,7 +121,7 @@ print(result)
 ```
 
 
-## 4. Use OrigeneMCP through CAMEL
+## 3.2. Use OrigeneMCP through CAMEL
 [CAMEL](https://github.com/camel-ai/camel) is an open-source community dedicated to finding the scaling laws of agents. In addition to local invocation, we can also use OrigeneMCP-based Agents through the CAMEL interface.
 
 1. **Install the CAMEL package:**
@@ -164,6 +172,11 @@ async def main():
 asyncio.run(main())
 
 ```
+
+## 3.3. Use OrigeneMCP through Bohrium
+Bohrium AI for Science platform is dedicated to providing a new research paradigm for scientists worldwide in the AI era, empowering scientific exploration through technological innovation and making the acquisition, understanding, and application of knowledge more intelligent and efficient. OrigeneMCP can be directly accessed and invoked through the [Bohrium AI for Science platform](https://www.bohrium.com/apps/origene).
+
+
 
 ## 4. Cite OrigeneMCP
 Any publication that discloses findings arising from using this source code should cite:
