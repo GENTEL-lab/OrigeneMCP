@@ -1,6 +1,6 @@
 import requests
 import json
-from typing import Dict, List, Optional, Union
+from typing import Dict, List, Optional
 from urllib.parse import urljoin
 import urllib
 
@@ -18,67 +18,64 @@ class EnsemblClient:
             "Accept": "application/json"
         })
     
-    def trim_dict_length(self, data, max_length):
+
+    @staticmethod
+    def _dumps(x):
+        return json.dumps(x, ensure_ascii=False, separators=(",", ":"))
+    
+    def limit_dict_length(self, data, max_length):
         """
-        This function trims the dictionary data to ensure its total length does not exceed max_length.
-        It tries to preserve key-value pairs, trimming the data accordingly.
+        Keep all keys without removing any; only shrink the values to ensure
+        len(json.dumps(result)) <= max_length.
+        Recursively handle nested structures.
         """
-        # Convert the dictionary to a JSON string to check its length
-        result_str = json.dumps(data)
-        
-        if len(result_str) > max_length:
-            # If the result is too long, start trimming key-value pairs
-            trimmed_data = {}
-            current_length = 0
-            
-            for key, value in data.items():
-                # Temporarily add the key-value pair to the result
-                temp_data = {key: value}
-                temp_str = json.dumps(temp_data)
-                
-                # If adding this key-value pair keeps us within the limit, add it to the trimmed dictionary
-                if current_length + len(temp_str) <= max_length:
-                    trimmed_data[key] = value
-                    current_length += len(temp_str)
-                else:
-                    break  # Stop once the max length is reached
-            
-            return trimmed_data  # Return the trimmed dictionary
-        else:
-            return data  # No need to trim, return the original dictionary
-        
+        assert isinstance(data, dict)
+        dumps = self._dumps
+
+        if len(dumps(data)) <= max_length:
+            return data
+
+        trimmed = {}
+        for k, v in data.items():
+            test = {**trimmed, k: v}
+            if len(dumps(test)) <= max_length:
+                trimmed[k] = v
+            else:
+                break
+        return trimmed
+
     def limit_list_length(self, data, max_length):
         """
-        Limit the length of the list by the total character length after converting elements to strings.
+        Trim a list so that len(json.dumps(result)) <= max_length.
         """
-        result = []
-        total_length = 0
-        
+        assert isinstance(data, list)
+        dumps = self._dumps
+
+        if len(dumps(data)) <= max_length:
+            return data
+
+        trimmed = []
         for item in data:
-            item_str = str(item)  # Convert the element to a string
-            item_length = len(item_str)
-            
-            if total_length + item_length > max_length:
-                break  # If adding the current element exceeds the max length, stop adding
-            
-            result.append(item)  # Otherwise, add the item to the result list
-            total_length += item_length  # Update the total length with the current item's length
-        
-        return result
-    
+            test = trimmed + [item]
+            if len(dumps(test)) <= max_length:
+                trimmed.append(item)
+            else:
+                break
+        return trimmed
+
     def limit_json_length(self, data, max_length):
         """
-        limit length
+        Dispatch by type and ensure the JSON-serialized length does not exceed max_length.
         """
-        if isinstance(data, dict):
-            
-            return self.limit_dict_length(data, max_length)
-        
-        elif isinstance(data, list):
-        
-            return self.limit_list_length(data, max_length)
-        
-        return data
+        try:
+            if isinstance(data, dict):
+                return self.limit_dict_length(data, max_length)
+            elif isinstance(data, list):
+                return self.limit_list_length(data, max_length)
+            else:
+                return data
+        except Exception:
+            return data
 
 
     def _make_request(self, method: str, endpoint: str, params: Optional[Dict] = None, 

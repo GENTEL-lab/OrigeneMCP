@@ -653,9 +653,9 @@ async def get_ontology_ancestors(id: str):
     Get ontology ancestors. Note: This tool is sensitive to the format of the input ID and may return a 400 Bad Request error for some valid-looking IDs. It is recommended to use IDs obtained directly from other Ensembl tools.
     
     Args:
-        id: Ontology term ID (e.g., a GO term ID like 'GO:0006281').
+        id: An ontology term identifier (a GO term ID like 'GO:0005667').
     
-    Query example: {"id": "GO:0006281"}
+    Query example: {"id": "GO:0005667"}
     
     Returns:
         A list of dictionaries, where each dictionary contains information about an ancestor ontology term.
@@ -673,9 +673,9 @@ async def get_ontology_descendants(id: str):
     Get ontology descendants. Note: This tool is sensitive to the format of the input ID and may return a 400 Bad Request error for some valid-looking IDs. It is recommended to use IDs obtained directly from other Ensembl tools.
     
     Args:
-        id: Ontology term ID (e.g., a GO term ID like 'GO:0006281').
+        id: Ontology term ID (e.g., a GO term ID like 'GO:0005667').
     
-    Query example: {"id": "GO:0006281"}
+    Query example: {"id": "GO:0005667"}
     
     Returns:
         A list of dictionaries, where each dictionary contains information about a descendant ontology term.
@@ -693,9 +693,9 @@ async def get_ontology_id(id: str):
     Get ontology by ID. Note: This tool is sensitive to the format of the input ID and may return a 400 Bad Request error for some valid-looking IDs. It is recommended to use IDs obtained directly from other Ensembl tools.
     
     Args:
-        id: Ontology term ID (e.g., a GO term ID like 'GO:0006281').
+        id: An ontology term identifier (a GO term ID like 'GO:0005667').
     
-    Query example: {"id": "GO:0006281"}
+    Query example: {"id": "GO:0005667"}
     
     Returns:
         Dictionary containing ontology information for the specified term, including its children and parents in the hierarchy.
@@ -713,9 +713,9 @@ async def get_ontology_name(name: str):
     Get ontology by name.
     
     Args:
-        name: Ontology term name
+        name: An ontology name. SQL wildcards are supported.
     
-    Query example: {"name": "reproduction"}
+    Query example: {"name": "transcription factor complex"}
     
     Returns:
         Dictionary containing ontology information for the matched term.
