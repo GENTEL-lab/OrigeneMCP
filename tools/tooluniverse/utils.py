@@ -54,7 +54,7 @@ def evaluate_function_call(tool_definition, function_call):
 
     # Check if all required parameters are present
     required_params = [key for key, value in tool_definition["parameter"]
-                       ["properties"].items() if value.get("required", False)]
+                       ["properties"].items() if isinstance(value, dict) and value.get("required", False)]
     missing_params = [
         param for param in required_params if param not in function_call["arguments"]]
     if missing_params:
