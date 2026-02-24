@@ -12,6 +12,7 @@
 
 ## 1. OrigeneMCP Overview
 > Recent updates:
+> - **2026-02-24** 🚀 Update new tools: DepMap, etc.
 > - **2025-07-28** 🚀 OriGene officially launched at WAIC 2025!
 > - **2025-07-22** 🔥 Integrated OrigeneMCP into the Bohrium AI for Science platform.
 > - **2025-07-19** 🔥 Integrated OrigeneMCP into CAMEL.
@@ -74,7 +75,7 @@ from langchain_mcp_adapters.client import MultiServerMCPClient
 tool_packages = [
     "chembl", "kegg", "string", "search", "pubchem", "ncbi",
     "uniprot", "tcga", "ensembl", "ucsc", "fda_drug", "pdb",
-    "monarch", "clinicaltrials", "dbsearch", "opentargets"
+    "monarch", "clinicaltrials", "dbsearch", "opentargets", "depmap"
 ]
 tool_packages = [server+'_mcp' for server in tool_packages]
 
