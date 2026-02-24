@@ -1,6 +1,6 @@
 import requests
 import pandas as pd
-from io import StringIO  # 修正点在这里
+from io import StringIO  # Fix point here
 
 class TCGA_API:
     BASE_URL = "http://firebrowse.org/api/v1/Samples/mRNASeq"
@@ -13,7 +13,7 @@ class TCGA_API:
         params = {
             "format": "tsv",
             "gene": gene,
-            "sample_type": "TM,TP,TR",  # 原发肿瘤样本
+            "sample_type": "TM,TP,TR",  # Primary tumor samples
             "protocol": "RSEM",
             "page_size": 2000,
             "page": 1,
@@ -33,25 +33,25 @@ class TCGA_API:
             if not content or content.startswith("No records"):
                 break
 
-            # 第一页提取列名
+            # Extract column names from the first page
             if params["page"] == 1:
                 df = pd.read_csv(StringIO(content), sep="\t")
                 columns = df.columns
             else:
                 df = pd.read_csv(StringIO(content), sep="\t", header=None)
-                df.columns = columns  # 手动补上列名
+                df.columns = columns  # Manually add column names
 
             all_data.append(df)
             params["page"] += 1
 
-        # 合并并保存
+        # Merge and save
         if all_data:
             final_df = pd.concat(all_data, ignore_index=True)
 
         df_grouped = final_df.groupby("cohort")["expression_log2"].agg(["mean", "std", "count"]).sort_values("mean", ascending=False)
         df_grouped["zscore"] = (df_grouped["mean"] - df_grouped["mean"].mean()) / df_grouped["mean"].std()
 
-        # 定义高低表达（zscore > 1 为高表达，< -1 为低表达）
+        # Define high/low expression (zscore > 1 for high expression, < -1 for low expression)
         high_expr = df_grouped[df_grouped["zscore"] > 1].sort_values("mean", ascending=False)
         low_expr = df_grouped[df_grouped["zscore"] < -1].sort_values("mean")
 

@@ -9,7 +9,7 @@ from invoke import Context
 @task
 def run(c: Context):
     """
-    运行服务端代码
+    Run server code
     """
     sp.check_call(
         "export PYTHONPATH=`fab pypath` ;uv run -m deploy.web",

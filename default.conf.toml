@@ -4,3 +4,12 @@ workers = 2
 
 tavily_api_key = ""
 jina_api_key = ""
+
+# TCGA DEG analysis tool config
+tcga_llm_api_key = ""
+tcga_llm_api_base = "https://api.openai-proxy.org/v1"
+tcga_output_dir = "./output"
+
+# DepMap cancer cell line analysis tool config
+# Use relative path from project root, or leave empty to use default (./tools/depmap/data)
+depmap_data_dir = "./tools/depmap/data"

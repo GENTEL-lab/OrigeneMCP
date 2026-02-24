@@ -126,7 +126,7 @@ def func_metadata(
     return resp
 
 
-# 因为FastMCP的封装add_tool无法指定parameters，所以把一些代码copy出来重写
+# Because FastMCP's add_tool wrapper cannot specify parameters, we copy and rewrite some code here
 def from_function(
     fn: Callable[..., Any],
     name: str | None = None,

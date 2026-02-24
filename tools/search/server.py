@@ -5,6 +5,7 @@ from mcp.server.fastmcp import FastMCP
 
 from tools.search.tavily_search import TavilySearchEngine
 from tools.search.jina_search import JinaSearchEngine
+from tools.search.paper_search import openalex_search
 from deploy.config import conf
 
 
@@ -45,4 +46,17 @@ async def jina_search(query: str):
         results = await to_thread(jina_api.run, query)
     except Exception as e:
         results = f"Tool jina_search execution failed for query: {query}, error: {e}"
+    return results
+
+
+@mcp.tool()
+async def paper_search(query: str):
+    """
+    Run the openalex search engine with a given query, retrieving and filtering results.
+    """
+
+    try:
+        results = await to_thread(openalex_search, query)
+    except Exception as e:
+        results = f"Tool openalex_search execution failed for query: {query}, error: {e}"
     return results

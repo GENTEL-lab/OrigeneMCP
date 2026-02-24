@@ -85,7 +85,7 @@ class ClinicalTrialsAPI:
         if sort:
             params["sort"] = ",".join(sort)
 
-        # 合并嵌套参数组
+        # Merge nested parameter groups
         params.update(self._flatten_params("query", query))
         params.update(self._flatten_params("filter", filter))
         params.update(self._flatten_params("postFilter", post_filter))

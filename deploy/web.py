@@ -17,6 +17,7 @@ from pydantic import BaseModel
 
 from tools.chembl.server import mcp as chembl_mcp
 from tools.clinicaltrials.server import mcp as clinicaltrials_mcp
+from tools.depmap.server import mcp as depmap_mcp
 from tools.ensembl.server import mcp as ensembl_mcp
 from tools.kegg.server import mcp as kegg_mcp
 from tools.ncbi.server import mcp as ncbi_mcp
@@ -43,6 +44,7 @@ mcps: List[FastMCP] = [
     ncbi_mcp,
     uniprot_mcp,
     tcga_mcp,
+    depmap_mcp,
     ensembl_mcp,
     ucsc_mcp,
     fda_drug_mcp,
@@ -67,10 +69,10 @@ app = FastAPI(title="OrigeneMcps", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  
-    allow_credentials=False, 
-    allow_methods=["*"],  
-    allow_headers=["*"],  
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 app.add_middleware(SaveBodyMiddleware)
 
@@ -102,7 +104,7 @@ for mcp in mcps:
 @app.get("/api/list_mcps")
 def list_mcps():
     ans = {}
-    base_url = f"{conf.mcp_index_base_url}"
+    base_url = f"{conf['mcp_index_base_url']}"
     for mcp in mcps:
         ans[mcp.name] = StreamableHttpConnection(
             transport="streamable_http", url=f"{base_url}/{mcp.name}/mcp/"
@@ -121,4 +123,11 @@ class ListToolResponse(BaseModel):
 
 
 if __name__ == "__main__":
-    uvicorn.run("deploy.web:app", workers=conf["workers"], port=conf["port"], reload=False)
+    uvicorn.run(
+        "deploy.web:app",
+        host="0.0.0.0",
+        workers=conf["workers"],
+        port=conf["port"],
+        reload=False,
+    )
+
